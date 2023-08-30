@@ -1,0 +1,59 @@
+//fonts
+$roboto-mono: 'Roboto Mono', monospace;
+$quicksand: 'Quicksand', sans-serif;
+
+//colors
+$black: #000;
+$off-black: #343231;
+$grey: #d1baac;
+$white: #ffff;
+$off-white: #f8f8f8;
+$red: rgb(255, 0, 0);
+$error-text: #f44336;
+$orange: #ffa500;
+$gold: rgb(255, 200, 15);
+$yellow: #ffff00;
+$mint: rgb(34, 214, 199);
+$sky-blue: rgb(15, 174, 223);
+$green: rgb(19, 187, 19);
+$success-text: #4caf50;
+
+//sizes
+$xs: 0.5rem;
+$normal: 1rem;
+$sm: 1.5rem;
+$md: 2rem;
+$lg: 3rem;
+$xlg: 5rem;
+$xxlg: 7rem;
+
+//button radius
+$btn-radius: 30px;
+
+//breakpoints
+$lg-breakpoint: 1024px;
+$lgr-breakpoint: 912px;
+$md-breakpoint: 768px;
+$sm-breakpoint: 641px;
+$xs-breakpoint: 480px;
+
+//shadow
+
+$shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+  0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+//scroll settings
+
+::-webkit-scrollbar {
+  background-color: $black;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $off-black;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $grey;
+}

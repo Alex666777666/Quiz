@@ -1,0 +1,386 @@
+.page {
+  display: flex;
+  background-image: url(/src/assets/img/moutn.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.questions {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $white;
+  border-left: 5px solid $yellow;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto 0 auto;
+  padding: $sm $md;
+  overflow-y: auto;
+
+  h2 {
+    text-align: center;
+    font-weight: lighter;
+  }
+
+  .lifeline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .lifeline {
+    position: relative;
+    top: -3px;
+  }
+
+  .disabled-icon {
+    color: $grey;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .disabled-text {
+    color: $grey;
+  }
+
+  .lightbulb {
+    color: $orange;
+    font-size: 20px;
+  }
+  .lightbulb:hover {
+    color: lighten($gold, 5%);
+  }
+
+  .lightbulb_text {
+    color: $orange;
+  }
+
+  .clock {
+    color: $sky-blue;
+    font-size: 20px;
+  }
+  .clock_text {
+    color: $sky-blue;
+  }
+
+  h5 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    overflow: auto;
+    font-size: 1.2rem;
+    margin-bottom: $lg;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .options-container {
+    margin: auto;
+    width: 100%;
+    height: 20rem;
+  }
+
+  .option {
+    background-color: $yellow;
+    border-radius: $btn-radius;
+    color: $black;
+    cursor: pointer;
+    margin: $md auto;
+    padding: $normal;
+    transition: 0.3s linear all;
+    text-align: center;
+    width: 90%;
+  }
+
+  .option.hidden {
+    visibility: hidden;
+  }
+
+  .option:hover {
+    background-color: darken($yellow, 20%);
+    color: lighten($white, 20%);
+  }
+}
+
+.btn-container {
+  // position: fixed;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto $sm auto;
+  cursor: pointer;
+  padding: $md;
+  width: 80%;
+}
+
+.btn-container button {
+  border: none;
+  color: $off-white;
+  cursor: pointer;
+  font-family: $quicksand;
+  margin-right: $md;
+  padding: $xs $sm;
+  width: 35%;
+}
+
+.btn-container button:first-child {
+  background-color: darken($yellow, 10%);
+  box-shadow: $shadow;
+  transition: 0.2s linear all;
+}
+
+.btn-container button:first-child:hover {
+  background-color: darken($yellow, 20%);
+}
+
+.btn-container button:nth-child(2) {
+  background-color: $green;
+  box-shadow: $shadow;
+  transition: 0.2s linear all;
+}
+
+.btn-container button:nth-child(2):hover {
+  background-color: darken($green, 10%);
+}
+.btn-container button:last-child {
+  background-color: $red;
+  box-shadow: $shadow;
+  transition: 0.2s linear all;
+}
+
+.btn-container button:last-child:hover {
+  background-color: darken($red, 10%);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    height: 100vh;
+    overflow-y: auto;
+    font-size: $normal;
+  }
+
+  .questions {
+    height: 100vh;
+    width: 90%;
+    margin: $md auto 0 auto;
+    padding: $xs $sm;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .question {
+      display: flex;
+      align-items: center;
+      height: 25%;
+      width: 100%;
+      margin-top: 0;
+      font-size: $sm;
+    }
+
+    .lifeline-container {
+      justify-content: space-between;
+    }
+
+    .lifeline {
+      top: 0;
+    }
+
+    .lightbulb {
+      font-size: $sm;
+    }
+
+    .lightbulb:hover {
+      color: $orange;
+    }
+
+    .lightbulb_text {
+      font-size: $sm;
+    }
+
+    .clock {
+      font-size: $sm;
+    }
+    .clock_text {
+      font-size: $sm;
+    }
+
+    .options-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .option {
+      width: 100%;
+      margin: $sm auto;
+    }
+
+    .option:hover {
+      background-color: $yellow;
+      color: $black;
+    }
+  }
+
+  .btn-container {
+    width: 90%;
+    margin: 0 auto $xs auto;
+    padding: $xs;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    button {
+      margin-right: 0;
+      margin-bottom: $sm;
+
+      &:first-child {
+        text-align: center;
+        width: 40%;
+      }
+
+      &:first-child:hover {
+        background-color: darken($yellow, 10%);
+      }
+      &:nth-child(2) {
+        text-align: center;
+        width: 40%;
+      }
+
+      &:nth-child(2):hover {
+        background-color: $green;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        width: 100%;
+      }
+      &:last-child:hover {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+/* Додаткові стилі для планшетів */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .page {
+    height: 100vh;
+    overflow-y: auto;
+    font-size: $sm;
+  }
+
+  .questions {
+    height: 100vh;
+    width: 90%;
+    margin: $md auto 0 auto;
+    padding: $xs $sm;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .question {
+      display: flex;
+      align-items: center;
+      height: 25%;
+      width: 100%;
+      margin-top: 0;
+      font-size: $md;
+    }
+
+    .lifeline-container {
+      justify-content: space-between;
+    }
+
+    .lifeline {
+      top: 0;
+    }
+
+    .lightbulb {
+      font-size: $md;
+    }
+
+    .lightbulb:hover {
+      color: $orange;
+    }
+
+    .lightbulb_text {
+      font-size: $md;
+    }
+
+    .clock {
+      font-size: $md;
+    }
+    .clock_text {
+      font-size: $md;
+    }
+
+    .options-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .option {
+      width: 100%;
+      margin: $sm auto;
+    }
+
+    .option:hover {
+      background-color: $yellow;
+      color: $black;
+    }
+  }
+
+  .btn-container {
+    width: 90%;
+    margin: 0 auto $xs auto;
+    padding: $xs;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    button {
+      margin-right: 0;
+      margin-bottom: $sm;
+
+      &:first-child {
+        text-align: center;
+        width: 40%;
+      }
+
+      &:first-child:hover {
+        background-color: darken($yellow, 10%);
+      }
+      &:nth-child(2) {
+        text-align: center;
+        width: 40%;
+      }
+
+      &:nth-child(2):hover {
+        background-color: $green;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        width: 100%;
+      }
+      &:last-child:hover {
+        background-color: $red;
+      }
+    }
+  }
+}

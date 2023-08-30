@@ -1,0 +1,142 @@
+.summary-page {
+  background-image: url(/src/assets/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.quiz-summary {
+  font-family: $quicksand;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .success {
+    color: $green;
+  }
+
+  h1 {
+    color: $green;
+    text-align: center;
+    font-size: $lg;
+    margin-top: -$sm;
+  }
+
+  .stats {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $white;
+    max-width: 50%;
+    padding: $sm $md $md $md;
+  }
+
+  .stats h4,
+  .stats h2 {
+    text-align: center;
+    color: $mint;
+  }
+
+  .stats .stat {
+    color: $white;
+    font-size: $normal;
+  }
+
+  section ul {
+    margin-top: $sm;
+    text-align: center;
+  }
+  section ul li {
+    display: inline-block;
+  }
+
+  section ul li a {
+    padding: $sm !important;
+  }
+
+  section ul li a:hover {
+    color: $off-white;
+  }
+
+  section ul li:first-child {
+    border: 1px solid $green;
+    margin-right: $sm;
+    transition: 0.3s linear all;
+  }
+
+  section ul li:first-child:hover {
+    background-color: $green;
+  }
+
+  section ul li:last-child {
+    border: 1px solid $gold;
+    transition: 0.3s linear all;
+  }
+
+  section ul li:last-child:hover {
+    background-color: $gold;
+  }
+
+  section ul li:first-child a {
+    color: $green;
+    font-weight: 500;
+  }
+
+  section ul li:first-child a:hover {
+    color: $off-white;
+  }
+
+  section ul li:last-child a {
+    color: $orange;
+    font-weight: 500;
+  }
+
+  section ul li:last-child a:hover {
+    color: $off-white;
+  }
+
+  .no-stats {
+    color: $off-black;
+    margin: $xxlg auto;
+  }
+}
+
+@media (max-width: $md-breakpoint) {
+  .quiz-summary {
+    font-size: $sm;
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+
+  div.container.stats {
+    margin: 0;
+    padding: $sm;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .summary-page {
+    font-size: $lg;
+  }
+
+  .quiz-summary {
+    font-size: $sm;
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+
+  div.container.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0;
+    padding: $sm;
+    height: 80vh;
+  }
+}

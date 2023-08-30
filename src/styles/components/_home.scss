@@ -1,0 +1,271 @@
+#home {
+  background-image: url(/src/assets/img/orange.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  max-height: 200vh;
+  width: 100%;
+
+  section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding-left: $md;
+    padding-right: $md;
+    height: auto;
+    width: 35%;
+  }
+
+  .house {
+    font-size: 8rem;
+    color: $orange;
+  }
+
+  h1 {
+    font-size: $lg;
+    font-weight: 400;
+    text-align: center;
+    color: $off-white;
+  }
+
+  .btn-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .play-btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-btn {
+    background-color: $orange;
+    border-radius: $btn-radius;
+    border: none;
+    color: $white;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 30px;
+    padding: $normal;
+    text-align: center;
+    transition: 0.3s linear all;
+    width: 30vw;
+
+    &:hover {
+      background-color: darken($orange, 10%);
+      box-shadow: $shadow;
+    }
+  }
+
+  .active {
+    background-color: darken($orange, 10%);
+  }
+
+  .difficulty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .difficulty-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: play-btn-show 0.5s ease;
+  }
+
+  @keyframes play-btn-show {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .difficulty-btn {
+    border: none;
+    border-radius: 10px;
+    color: $white;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: $normal;
+    text-align: center;
+    transition: 0.3s linear all;
+    width: 15vw;
+  }
+
+  .easy {
+    background-color: $green;
+
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+  }
+
+  .medium {
+    background-color: $gold;
+    &:hover {
+      background-color: darken($gold, 10%);
+    }
+  }
+
+  .hard {
+    background-color: $red;
+    &:hover {
+      background-color: darken($red, 10%);
+    }
+  }
+
+  .dice {
+    font-size: $normal;
+  }
+}
+
+.lucky-btn {
+  background: $red;
+  background: linear-gradient(90deg, $red 0%, $orange 100%);
+  border-radius: $btn-radius;
+  border: none;
+  color: $white;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 30px;
+  padding: $normal;
+  text-align: center;
+  transition: 0.3s linear all;
+  width: 30vw;
+
+  &:hover {
+    background: $green;
+    background: linear-gradient(90deg, $green 0%, $mint 100%);
+    box-shadow: $shadow;
+  }
+}
+
+.page-selector {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.arrow {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    stroke: $mint;
+    // position: relative;
+    // top: -1px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset 0.3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
+
+  &:hover {
+    .arrow-icon--circle {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.arrow.left .arrow-icon {
+  transform: rotate(180deg) translate3d(-5px, 0, 0);
+}
+
+.arrow.right .arrow-icon {
+  transform: translate3d(5px, 0, 0);
+}
+
+.arrow.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+
+  .arrow-icon {
+    stroke: $grey;
+  }
+}
+
+.page-number {
+  color: $off-white;
+  // position: relative;
+}
+
+/* Додаткові стилі для телефонів */
+@media screen and (max-width: 480px) {
+  #home section {
+    padding: 0 $normal;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    overflow-y: auto;
+    font-size: $sm;
+  }
+
+  #home .play-btn {
+    width: 70vw;
+  }
+
+  #home .difficulty-btn {
+    width: 40vw;
+  }
+
+  .lucky-btn {
+    width: 70vw;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Додаткові стилі для планшетів */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  #home section {
+    padding: 0 $normal;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    overflow-y: auto;
+    font-size: $sm;
+  }
+
+  #home .play-btn {
+    width: 70vw;
+  }
+
+  #home .difficulty-btn {
+    width: 40vw;
+  }
+
+  .lucky-btn {
+    width: 70vw;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

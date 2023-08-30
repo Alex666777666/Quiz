@@ -1,0 +1,57 @@
+@import './settings.scss';
+
+$roboto-mono: 'Roboto Mono', monospace;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $roboto-mono;
+}
+
+.toast-invalid {
+  background-color: $error-text !important;
+  border-radius: 5px !important;
+  color: $off-white !important;
+}
+
+.toast-valid {
+  background-color: $success-text !important;
+  border-radius: 5px !important;
+  color: $off-white !important;
+}
+
+@media screen and (max-width: 480px) {
+  .toast-invalid {
+    position: fixed;
+    top: 0px;
+  }
+  .toast-valid {
+    position: fixed;
+    top: 0px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .toast-invalid {
+    position: fixed;
+    top: 0px;
+    width: 90%;
+    height: 4%;
+  }
+  .toast-valid {
+    position: fixed;
+    top: 0px;
+    width: 90%;
+    height: 4%;
+  }
+}
+
+.disable {
+  background-color: #ccc !important;
+  box-shadow: none !important;
+  opacity: 0.9 !important;
+  pointer-events: none;
+}
