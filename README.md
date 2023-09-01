@@ -42,7 +42,7 @@ bash: `npm start`
 After completing these steps, open a web browser and go to http://localhost:3000 to see and interact with the "Quiz App."
 
 But if you want to see how the application looks without reviewing the code, you can easily do so by following this link: 
-https://64ef496b00059b122cf1a8f3--snazzy-muffin-999cfb.netlify.app/
+https://64f1b619a429c04cd64a5e15--thunderous-semifreddo-ca84e9.netlify.app/
 
 Author
 
