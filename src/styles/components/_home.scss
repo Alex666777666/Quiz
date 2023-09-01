@@ -1,5 +1,5 @@
 #home {
-  background-image: url(/src/assets/img/orange.jpg);
+  background-color: lighten($orange, 6%);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -166,8 +166,6 @@
 
   .arrow-icon {
     stroke: $mint;
-    // position: relative;
-    // top: -1px;
     transition: transform 0.3s ease;
     vertical-align: middle;
   }
@@ -205,10 +203,8 @@
 
 .page-number {
   color: $off-white;
-  // position: relative;
 }
 
-/* Додаткові стилі для телефонів */
 @media screen and (max-width: 480px) {
   #home section {
     padding: 0 $normal;
@@ -239,7 +235,6 @@
   }
 }
 
-/* Додаткові стилі для планшетів */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   #home section {
     padding: 0 $normal;

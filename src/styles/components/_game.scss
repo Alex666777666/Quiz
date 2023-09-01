@@ -89,7 +89,8 @@
     padding: $normal;
     transition: 0.3s linear all;
     text-align: center;
-    width: 90%;
+    width: 50%;
+    max-width: 90%;
   }
 
   .option.hidden {
@@ -103,7 +104,6 @@
 }
 
 .btn-container {
-  // position: fixed;
   bottom: 0%;
   display: flex;
   justify-content: center;
@@ -270,7 +270,6 @@
   }
 }
 
-/* Додаткові стилі для планшетів */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .page {
     height: 100vh;

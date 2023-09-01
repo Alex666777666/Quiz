@@ -4,6 +4,9 @@
   background-position: center;
   height: 100vh;
   overflow-y: auto;
+  // max-width: 100%;
+  // height: auto;
+  // object-fit: cover;
 }
 
 .quiz-summary {
@@ -119,7 +122,7 @@
   display: none;
 }
 
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
   .summary-page {
     font-size: $lg;
   }
@@ -138,5 +141,27 @@
     margin: 0;
     padding: $sm;
     height: 80vh;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .summary-page {
+    font-size: $xs;
+  }
+
+  .quiz-summary {
+    font-size: $normal;
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+
+  div.container.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0;
+    padding: $xs;
+    height: 100vh;
   }
 }
